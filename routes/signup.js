@@ -11,7 +11,7 @@ signupRouter.post('/', async (req, res, next) => {
         errors.password = "Password must be at least 6 characters long."
     }
     try {
-        if (isUsernameTaken(data.username)) {
+        if (await isUsernameTaken(data.username)) {
             errors.username = "Username has already been taken.";
         }
     }
