@@ -40,7 +40,7 @@ export async function loginUser(credentials) {
 }
 
 export function createJSONToken(username) {
-    return sign({ username }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    return sign({ username }, process.env.JWT_SECRET, { expiresIn: '5h' });
 }
 
 export function validateJSONToken(token) {
